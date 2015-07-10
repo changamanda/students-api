@@ -33,7 +33,7 @@ end
 
 ## Using the `Responders` Gem
 
-If you want to use a controller-level `respond_to` feature, you can do so with a gem called `responders`. Simply add `gem 'responders'` to your Gemfile. Now, you can refactor your code to be less repetitive:
+If you want to use a controller-level `respond_to` feature, you can do so with a gem called `responders`. Simply add `gem 'responders'` to your Gemfile, and `bundle install`. Now, you can refactor your code to be less repetitive:
 
 ```ruby
 class PeopleController < ApplicationController
@@ -45,3 +45,9 @@ class PeopleController < ApplicationController
   end
 end
 ```
+
+## Instructions
+
+1. Implement the API actions and get the tests to pass!
+2. HINT: You will want to change `protect_from_forgery with: :exception` to `protect_from_forgery with: :null_session`.
+3. HINT: You can return a response with a status and an empty body with `render nothing: true, status: 200`.

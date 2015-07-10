@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  resources :cohorts, defaults: { format: 'json' }, only: [:index, :show, :create, :update, :destroy] do
-    resources :students, defaults: { format: 'json' }, only: [:index]
-  end
-
-  resources :students, defaults: { format: 'json' }, only: [:index, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -48,6 +48,6 @@ end
 
 ## Instructions
 
-1. Implement the API actions and get the tests to pass!
+1. Implement the API actions and get the tests to pass! You'll probably want to start by defining some routes.
 2. HINT: You will want to change `protect_from_forgery with: :exception` to `protect_from_forgery with: :null_session`.
 3. HINT: You can return a response with a status and an empty body with `render nothing: true, status: 200`.

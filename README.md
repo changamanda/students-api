@@ -26,7 +26,22 @@ According to the API:
 If we want to respond to the action with JSON (which we will for our API), we can write:
 
 ```ruby
-  respond_to do |format|
-    format.json { render json: @people }
+respond_to do |format|
+  format.json { render json: @people }
+end
+```
+
+## Using the `Responders` Gem
+
+If you want to use a controller-level `respond_to` feature, you can do so with a gem called `responders`. Simply add `gem 'responders'` to your Gemfile. Now, you can refactor your code to be less repetitive:
+
+```ruby
+class PeopleController < ApplicationController
+  respond_to :json
+  
+  def index
+    @people = Person.all
+    respond_with @people
   end
+end
 ```
